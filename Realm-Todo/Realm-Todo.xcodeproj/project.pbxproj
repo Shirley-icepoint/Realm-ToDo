@@ -11,13 +11,13 @@
 		A1D6647DAD02E3829CFDCB19 /* Pods_Realm_TodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94935EA74C367210914FE2D6 /* Pods_Realm_TodoTests.framework */; };
 		D4712F51812355C7F46BDB84 /* Pods_Realm_TodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA90EC1A0B959218986131E7 /* Pods_Realm_TodoUITests.framework */; };
 		E4E3AB251DE0076500BDE462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB241DE0076500BDE462 /* AppDelegate.swift */; };
-		E4E3AB271DE0076500BDE462 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB261DE0076500BDE462 /* ViewController.swift */; };
 		E4E3AB2A1DE0076500BDE462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E3AB281DE0076500BDE462 /* Main.storyboard */; };
 		E4E3AB2C1DE0076500BDE462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E3AB2B1DE0076500BDE462 /* Assets.xcassets */; };
 		E4E3AB2F1DE0076500BDE462 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E3AB2D1DE0076500BDE462 /* LaunchScreen.storyboard */; };
 		E4E3AB3A1DE0076500BDE462 /* Realm_TodoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB391DE0076500BDE462 /* Realm_TodoTests.swift */; };
 		E4E3AB451DE0076500BDE462 /* Realm_TodoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB441DE0076500BDE462 /* Realm_TodoUITests.swift */; };
 		E4E3AB531DE0098B00BDE462 /* Order.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB521DE0098A00BDE462 /* Order.swift */; };
+		E4E3AB551DE011CC00BDE462 /* OrderTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB541DE011CC00BDE462 /* OrderTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +49,6 @@
 		DA90EC1A0B959218986131E7 /* Pods_Realm_TodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Realm_TodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E3AB211DE0076500BDE462 /* Realm-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E3AB241DE0076500BDE462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		E4E3AB261DE0076500BDE462 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E4E3AB291DE0076500BDE462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E4E3AB2B1DE0076500BDE462 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E4E3AB2E1DE0076500BDE462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -61,6 +60,7 @@
 		E4E3AB441DE0076500BDE462 /* Realm_TodoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Realm_TodoUITests.swift; sourceTree = "<group>"; };
 		E4E3AB461DE0076500BDE462 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E4E3AB521DE0098A00BDE462 /* Order.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Order.swift; sourceTree = "<group>"; };
+		E4E3AB541DE011CC00BDE462 /* OrderTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -140,12 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				E4E3AB241DE0076500BDE462 /* AppDelegate.swift */,
-				E4E3AB261DE0076500BDE462 /* ViewController.swift */,
 				E4E3AB281DE0076500BDE462 /* Main.storyboard */,
 				E4E3AB2B1DE0076500BDE462 /* Assets.xcassets */,
 				E4E3AB2D1DE0076500BDE462 /* LaunchScreen.storyboard */,
 				E4E3AB301DE0076500BDE462 /* Info.plist */,
 				E4E3AB521DE0098A00BDE462 /* Order.swift */,
+				E4E3AB541DE011CC00BDE462 /* OrderTableViewController.swift */,
 			);
 			path = "Realm-Todo";
 			sourceTree = "<group>";
@@ -431,7 +431,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E3AB531DE0098B00BDE462 /* Order.swift in Sources */,
-				E4E3AB271DE0076500BDE462 /* ViewController.swift in Sources */,
+				E4E3AB551DE011CC00BDE462 /* OrderTableViewController.swift in Sources */,
 				E4E3AB251DE0076500BDE462 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

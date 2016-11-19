@@ -10,10 +10,7 @@ import Foundation
 import RealmSwift
 
 class Order: Object {
-    
-// Specify properties to ignore (Realm won't persist these)
-    
-//  override static func ignoredProperties() -> [String] {
-//    return []
-//  }
+    dynamic var createdAt = NSDate()
+    dynamic var status = ""
+    dynamic var price = 0
 }
