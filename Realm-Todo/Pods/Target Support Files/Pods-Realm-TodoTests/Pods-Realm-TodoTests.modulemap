@@ -1,0 +1,6 @@
+framework module Pods_Realm_TodoTests {
+  umbrella header "Pods-Realm-TodoTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
