@@ -7,45 +7,50 @@
 //
 
 import UIKit
+import RealmSwift
 
 class OrderTableViewController: UITableViewController {
+    var orders : Results<Order>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    override func viewWillAppear(animated: Bool) {
+        loadOrders()
+    }
+
+    func loadOrders() {
+        orders = uiRealm.objects(Order)
+        tableView.reloadData()
+    }
+
+    @IBAction func addOrder(sender: UIBarButtonItem) {
+
+        try! uiRealm.write{
+            let newOrder = Order()
+            uiRealm.add(newOrder)
+            loadOrders()
+        }
     }
 
     // MARK: - Table view data source
-
-    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return orders.count;
     }
 
-    /*
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("orderCell", forIndexPath: indexPath)
 
-        // Configure the cell...
+        let order = orders[indexPath.row]
 
+        let dateformatter = NSDateFormatter()
+        dateformatter.dateStyle = NSDateFormatterStyle.ShortStyle
+        dateformatter.timeStyle = NSDateFormatterStyle.ShortStyle
+
+        cell.textLabel?.text = dateformatter.stringFromDate(order.createdAt)
         return cell
     }
-    */
 
     /*
     // Override to support conditional editing of the table view.

@@ -14,7 +14,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ue9-8H-mmY">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="orderCell" id="ue9-8H-mmY">
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ue9-8H-mmY" id="TPS-Xz-4zq">
@@ -28,7 +28,16 @@
                             <outlet property="delegate" destination="0Pm-w4-WPC" id="13O-7t-NqC"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Order" id="njo-dJ-bt1"/>
+                    <navigationItem key="navigationItem" title="Order" id="njo-dJ-bt1">
+                        <barButtonItem key="rightBarButtonItem" title="+" id="hEl-i4-xpO">
+                            <connections>
+                                <action selector="addOrder:" destination="0Pm-w4-WPC" id="IzV-rX-xhK"/>
+                            </connections>
+                        </barButtonItem>
+                        <connections>
+                            <outlet property="rightBarButtonItem" destination="hEl-i4-xpO" id="XIb-Jz-2XB"/>
+                        </connections>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iIY-fL-WZW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
