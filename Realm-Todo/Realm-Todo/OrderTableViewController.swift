@@ -26,12 +26,13 @@ class OrderTableViewController: UITableViewController {
     }
 
     @IBAction func addOrder(sender: UIBarButtonItem) {
-
-        try! uiRealm.write{
-            let newOrder = Order()
-            uiRealm.add(newOrder)
-            loadOrders()
-        }
+        let orderStep1ViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderStep1ViewController") as! OrderStep1ViewController
+        navigationController?.pushViewController(orderStep1ViewController, animated: true)
+//        try! uiRealm.write{
+//            let newOrder = Order()
+//            uiRealm.add(newOrder)
+//            loadOrders()
+//        }
     }
 
     // MARK: - Table view data source

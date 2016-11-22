@@ -10,6 +10,9 @@
 		2820B2BD76664BCBEA09C950 /* Pods_Realm_Todo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4A27BA95F08377FDDD04BF6B /* Pods_Realm_Todo.framework */; };
 		A1D6647DAD02E3829CFDCB19 /* Pods_Realm_TodoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94935EA74C367210914FE2D6 /* Pods_Realm_TodoTests.framework */; };
 		D4712F51812355C7F46BDB84 /* Pods_Realm_TodoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA90EC1A0B959218986131E7 /* Pods_Realm_TodoUITests.framework */; };
+		E465833B1DE3D0C50008B432 /* OrderStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465833A1DE3D0C50008B432 /* OrderStep1ViewController.swift */; };
+		E465833D1DE3D2580008B432 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465833C1DE3D2580008B432 /* Dish.swift */; };
+		E46583451DE3D9740008B432 /* DishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46583441DE3D9740008B432 /* DishTableViewCell.swift */; };
 		E4E3AB251DE0076500BDE462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB241DE0076500BDE462 /* AppDelegate.swift */; };
 		E4E3AB2A1DE0076500BDE462 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4E3AB281DE0076500BDE462 /* Main.storyboard */; };
 		E4E3AB2C1DE0076500BDE462 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E4E3AB2B1DE0076500BDE462 /* Assets.xcassets */; };
@@ -47,6 +50,9 @@
 		A28C5575A523816B9441367E /* Pods-Realm-Todo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm-Todo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Realm-Todo/Pods-Realm-Todo.release.xcconfig"; sourceTree = "<group>"; };
 		DA267669EBAF35AA0C572FBA /* Pods-Realm-TodoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Realm-TodoTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Realm-TodoTests/Pods-Realm-TodoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		DA90EC1A0B959218986131E7 /* Pods_Realm_TodoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Realm_TodoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E465833A1DE3D0C50008B432 /* OrderStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStep1ViewController.swift; sourceTree = "<group>"; };
+		E465833C1DE3D2580008B432 /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
+		E46583441DE3D9740008B432 /* DishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishTableViewCell.swift; sourceTree = "<group>"; };
 		E4E3AB211DE0076500BDE462 /* Realm-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4E3AB241DE0076500BDE462 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E4E3AB291DE0076500BDE462 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -146,6 +152,9 @@
 				E4E3AB301DE0076500BDE462 /* Info.plist */,
 				E4E3AB521DE0098A00BDE462 /* Order.swift */,
 				E4E3AB541DE011CC00BDE462 /* OrderTableViewController.swift */,
+				E465833A1DE3D0C50008B432 /* OrderStep1ViewController.swift */,
+				E465833C1DE3D2580008B432 /* Dish.swift */,
+				E46583441DE3D9740008B432 /* DishTableViewCell.swift */,
 			);
 			path = "Realm-Todo";
 			sourceTree = "<group>";
@@ -431,6 +440,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4E3AB531DE0098B00BDE462 /* Order.swift in Sources */,
+				E465833D1DE3D2580008B432 /* Dish.swift in Sources */,
+				E465833B1DE3D0C50008B432 /* OrderStep1ViewController.swift in Sources */,
+				E46583451DE3D9740008B432 /* DishTableViewCell.swift in Sources */,
 				E4E3AB551DE011CC00BDE462 /* OrderTableViewController.swift in Sources */,
 				E4E3AB251DE0076500BDE462 /* AppDelegate.swift in Sources */,
 			);

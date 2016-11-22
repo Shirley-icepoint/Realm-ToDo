@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--OrderTableViewController-->
@@ -18,7 +19,7 @@
                                 <rect key="frame" x="0.0" y="92" width="600" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ue9-8H-mmY" id="TPS-Xz-4zq">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="44"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -56,6 +57,68 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GP7-sE-PYQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Order Step1 View Controller-->
+        <scene sceneID="OL0-Do-M6e">
+            <objects>
+                <tableViewController storyboardIdentifier="OrderStep1ViewController" id="bWc-Wg-Wx2" customClass="OrderStep1ViewController" customModule="Realm_Todo" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="zvp-kc-VMB">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="dishCell" id="PrI-22-2iI" customClass="DishTableViewCell" customModule="Realm_Todo" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="28" width="600" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="PrI-22-2iI" id="H26-0g-NMG">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="EMb-y5-2nw">
+                                            <rect key="frame" x="449" y="0.0" width="25" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XeE-5c-E9V">
+                                            <rect key="frame" x="416" y="0.0" width="25" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fPP-4Y-8eq">
+                                            <rect key="frame" x="24" y="0.0" width="25" height="30"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                        </textField>
+                                        <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="r5V-uj-OPs">
+                                            <rect key="frame" x="482" y="0.0" width="94" height="29"/>
+                                            <connections>
+                                                <action selector="stepperValueChanged:" destination="PrI-22-2iI" eventType="valueChanged" id="g23-jj-HSb"/>
+                                            </connections>
+                                        </stepper>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="r5V-uj-OPs" firstAttribute="leading" secondItem="EMb-y5-2nw" secondAttribute="trailing" constant="8" id="85y-fY-MtV"/>
+                                        <constraint firstItem="EMb-y5-2nw" firstAttribute="leading" secondItem="XeE-5c-E9V" secondAttribute="trailing" constant="8" id="Uc5-eJ-gbu"/>
+                                        <constraint firstItem="fPP-4Y-8eq" firstAttribute="leading" secondItem="H26-0g-NMG" secondAttribute="leadingMargin" constant="16" id="c3G-Kj-CUW"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="r5V-uj-OPs" secondAttribute="trailing" constant="16" id="ia5-zn-m2r"/>
+                                    </constraints>
+                                </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="name" destination="fPP-4Y-8eq" id="iBu-mF-tdQ"/>
+                                    <outlet property="number" destination="EMb-y5-2nw" id="vOi-Z4-jAc"/>
+                                    <outlet property="price" destination="XeE-5c-E9V" id="GL3-xc-qid"/>
+                                    <outlet property="stepper" destination="r5V-uj-OPs" id="J0f-wB-eBV"/>
+                                </connections>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="delegate" destination="bWc-Wg-Wx2" id="DUc-Is-kQg"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uoA-Dz-Tll" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="1289"/>
         </scene>
     </scenes>
 </document>
