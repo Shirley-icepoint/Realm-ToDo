@@ -32,7 +32,8 @@ class OrderStep1ViewController: UITableViewController {
     }
 
     func goToStep2() {
-
+        let orderStep2ViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderStep2ViewController") as! OrderStep2ViewController
+        navigationController?.pushViewController(orderStep2ViewController, animated: true)
     }
 
     override func didReceiveMemoryWarning() {

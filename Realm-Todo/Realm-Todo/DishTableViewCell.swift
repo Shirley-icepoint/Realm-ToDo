@@ -9,9 +9,9 @@
 import UIKit
 
 class DishTableViewCell: UITableViewCell {
-    @IBOutlet weak var number: UITextField!
-    @IBOutlet weak var price: UITextField!
-    @IBOutlet weak var name: UITextField!
+    @IBOutlet weak var number: UILabel!
+    @IBOutlet weak var price: UILabel!
+    @IBOutlet weak var name: UILabel!
     @IBOutlet weak var stepper: UIStepper!
 
     @IBAction func stepperValueChanged(sender: AnyObject) {
