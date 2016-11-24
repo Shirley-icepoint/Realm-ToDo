@@ -12,7 +12,8 @@ class OrderStep2ViewController: UITableViewController {
 
     @IBOutlet weak var priceCell: UITableViewCell!
     @IBOutlet weak var nameCell: UITableViewCell!
-    
+
+    var order: Order!
 
     override func viewDidLoad() {
         super.viewDidLoad()

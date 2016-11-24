@@ -13,4 +13,11 @@ class Dish: Object {
     dynamic var name = ""
     dynamic var price = 0
     dynamic var number = 0
+
+    convenience init(name: String, price: Int, number: Int) {
+        self.init()
+        self.name = name
+        self.price = price
+        self.number = number
+    }
 }
