@@ -12,10 +12,6 @@ import RealmSwift
 class OrderStep1ViewController: UITableViewController {
     var order: Order!
 
-    @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var price: UITextField!
-    @IBOutlet weak var number: UITextField!
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -25,6 +21,11 @@ class OrderStep1ViewController: UITableViewController {
     func goToStep2() {
         let orderStep2ViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderStep2ViewController") as! OrderStep2ViewController
         orderStep2ViewController.order = order
+        for i in 0..<order.dishes.count {
+            let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: i, inSection: 0)) as! DishTableViewCell
+
+            order.dishes[i].number = Int(cell.number.text!)!
+        }
         navigationController?.pushViewController(orderStep2ViewController, animated: true)
     }
 

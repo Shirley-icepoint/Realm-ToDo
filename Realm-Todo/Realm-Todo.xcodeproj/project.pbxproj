@@ -13,6 +13,8 @@
 		E465833B1DE3D0C50008B432 /* OrderStep1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465833A1DE3D0C50008B432 /* OrderStep1ViewController.swift */; };
 		E465833D1DE3D2580008B432 /* Dish.swift in Sources */ = {isa = PBXBuildFile; fileRef = E465833C1DE3D2580008B432 /* Dish.swift */; };
 		E46583451DE3D9740008B432 /* DishTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E46583441DE3D9740008B432 /* DishTableViewCell.swift */; };
+		E49569171DE7D2E700F72839 /* TextTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49569161DE7D2E700F72839 /* TextTableViewCell.swift */; };
+		E49569191DE7D54000F72839 /* PriceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49569181DE7D54000F72839 /* PriceTableViewCell.swift */; };
 		E4AD48531DE520B60007A009 /* OrderStep2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4AD48521DE520B60007A009 /* OrderStep2ViewController.swift */; };
 		E4B022541DE68B2F00A44DE9 /* Info.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B022531DE68B2F00A44DE9 /* Info.swift */; };
 		E4E3AB251DE0076500BDE462 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4E3AB241DE0076500BDE462 /* AppDelegate.swift */; };
@@ -55,6 +57,8 @@
 		E465833A1DE3D0C50008B432 /* OrderStep1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderStep1ViewController.swift; sourceTree = "<group>"; };
 		E465833C1DE3D2580008B432 /* Dish.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dish.swift; sourceTree = "<group>"; };
 		E46583441DE3D9740008B432 /* DishTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DishTableViewCell.swift; sourceTree = "<group>"; };
+		E49569161DE7D2E700F72839 /* TextTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextTableViewCell.swift; sourceTree = "<group>"; };
+		E49569181DE7D54000F72839 /* PriceTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriceTableViewCell.swift; sourceTree = "<group>"; };
 		E4AD48521DE520B60007A009 /* OrderStep2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OrderStep2ViewController.swift; path = ../OrderStep2ViewController.swift; sourceTree = "<group>"; };
 		E4B022531DE68B2F00A44DE9 /* Info.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Info.swift; sourceTree = "<group>"; };
 		E4E3AB211DE0076500BDE462 /* Realm-Todo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Realm-Todo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -138,6 +142,8 @@
 			isa = PBXGroup;
 			children = (
 				E46583441DE3D9740008B432 /* DishTableViewCell.swift */,
+				E49569161DE7D2E700F72839 /* TextTableViewCell.swift */,
+				E49569181DE7D54000F72839 /* PriceTableViewCell.swift */,
 			);
 			name = viewCell;
 			sourceTree = "<group>";
@@ -461,8 +467,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E49569171DE7D2E700F72839 /* TextTableViewCell.swift in Sources */,
 				E4AD48531DE520B60007A009 /* OrderStep2ViewController.swift in Sources */,
 				E4B022541DE68B2F00A44DE9 /* Info.swift in Sources */,
+				E49569191DE7D54000F72839 /* PriceTableViewCell.swift in Sources */,
 				E4E3AB531DE0098B00BDE462 /* Order.swift in Sources */,
 				E465833D1DE3D2580008B432 /* Dish.swift in Sources */,
 				E465833B1DE3D0C50008B432 /* OrderStep1ViewController.swift in Sources */,

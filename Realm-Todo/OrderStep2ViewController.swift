@@ -10,10 +10,17 @@ import UIKit
 
 class OrderStep2ViewController: UITableViewController {
 
-    @IBOutlet weak var priceCell: UITableViewCell!
-    @IBOutlet weak var nameCell: UITableViewCell!
+    @IBOutlet weak var priceLabel: UILabel!
 
     var order: Order!
+    var labels: [String] = [
+        "Name",
+        "Address",
+        "Phone",
+        "Message",
+        "PayMethod",
+        "Price",
+    ]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,32 +29,26 @@ class OrderStep2ViewController: UITableViewController {
     }
 
     func completeOrder() {
-
+        try! uiRealm.write({
+            uiRealm.add(order)
+        })
+        navigationController?.popToRootViewControllerAnimated(true)
     }
 
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return labels.count
     }
 
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        var identifier: String
-        switch indexPath.row {
-        case 0 :
-            identifier = "nameCell"
-        case 1:
-            identifier = "addressCell"
-        case 2:
-            identifier = "phoneCell"
-        case 3:
-            identifier = "messageCell"
-        case 4:
-            identifier = "payCell"
-        default:
-            identifier = "priceCell"
+        if (indexPath.row == 6) {
+            let cell = tableView.dequeueReusableCellWithIdentifier("priceTableViewCell", forIndexPath: indexPath) as! PriceTableViewCell
+            cell.label.text = labels[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCellWithIdentifier("textTableViewCell", forIndexPath: indexPath) as! TextTableViewCell
+            cell.lable.text = labels[indexPath.row]
+            return cell
         }
-
-        let cell = tableView.dequeueReusableCellWithIdentifier(identifier, forIndexPath: indexPath)
-        return cell
     }
 
 }
