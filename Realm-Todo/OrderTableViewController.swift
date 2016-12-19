@@ -28,9 +28,12 @@ class OrderTableViewController: UITableViewController {
 
     @IBAction func addOrder(sender: UIBarButtonItem) {
         let orderStep1ViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderStep1ViewController") as! OrderStep1ViewController
+
         order = Order()
         orderStep1ViewController.order = order
+
         navigationController?.pushViewController(orderStep1ViewController, animated: true)
+
 //        try! uiRealm.write{
 //            let newOrder = Order()
 //            uiRealm.add(newOrder)
@@ -53,6 +56,12 @@ class OrderTableViewController: UITableViewController {
         dateformatter.timeStyle = NSDateFormatterStyle.ShortStyle
 
         cell.textLabel?.text = dateformatter.stringFromDate(order.createdAt)
+
         return cell
+    }
+
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+//        let orderReviewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("OrderReviewController") as! OrderReviewController
+//        navigationController?.pushViewController(orderReviewController, animated: true)
     }
 }

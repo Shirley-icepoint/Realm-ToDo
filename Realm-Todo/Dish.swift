@@ -11,13 +11,17 @@ import RealmSwift
 
 class Dish: Object {
     dynamic var name = ""
-    dynamic var price = 0
+    dynamic var enName = ""
+    dynamic var price = 0.0
+    dynamic var unit = ""
     dynamic var number = 0
 
-    convenience init(name: String, price: Int, number: Int) {
+    convenience init(name: String, enName: String, price: Double, unit: String) {
         self.init()
         self.name = name
+        self.enName = enName
         self.price = price
-        self.number = number
+        self.unit = unit
+        self.number = 0
     }
 }
